@@ -1,9 +1,8 @@
 <?php
-namespace core;
+namespace Core;
 class Core{
     public function ccd(){
         echo "Dd";
     }
 }
 
-?>

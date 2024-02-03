@@ -1,5 +1,5 @@
 <?php
-namespace core;
+namespace Core\Router;
 class Router{
     protected $url;
     public static function Get(string $url=""){

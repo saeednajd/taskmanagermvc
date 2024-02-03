@@ -1,13 +1,16 @@
 <?php
-include  __DIR__ ."/autoloads.php";
+//adding auto load  class for composer packages
+
+include __DIR__ ."/vendor/autoload.php";
 echo "index";
-use core\DbConnect;
-use core\Router;
+echo"<hr>";
+
+
 // $test=new DbConnect();
 // $test->connect();
-$url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+// $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-Router::Get($url);
+// Router::Get($url);
 // var_dump($_SERVER);
 // echo "<hr>";
 // echo "آدرس وارد شده:  $url";

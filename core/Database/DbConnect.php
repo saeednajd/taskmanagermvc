@@ -1,5 +1,5 @@
 <?php
-namespace core;
+namespace Core\Database;
 
 use mysqli;
 use Views\Erorrs;
