@@ -1,14 +1,16 @@
 <?php
-//adding auto load  class for composer packages
 
-include __DIR__ ."/vendor/autoload.php";
+include __DIR__."/Bootstrap/boot.php";
+use Core\Database\DbConnect;
+
 echo "index";
 echo"<hr>";
+echo $_ENV["host"];
 
 
-// $test=new DbConnect();
-// $test->connect();
-// $url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+$test=new DbConnect($_ENV["host"],$_ENV["db"],$_ENV["username"],$_ENV["password"]);
+$test->connect();
+$url = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 // Router::Get($url);
 // var_dump($_SERVER);
@@ -30,4 +32,3 @@ echo"<hr>";
 
 
 
-?>

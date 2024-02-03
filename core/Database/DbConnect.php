@@ -5,14 +5,15 @@ use mysqli;
 use Views\Erorrs;
 class DbConnect{
     private mysqli $con;
-    private $host="sql6.freemysqlhosting.net";
-
-    private $db="sql6681602";
-
-    private $username="sql6681602";
-    private $password="N6BjuAGhYY";
-    function __construct() {
-
+    private $host;
+    private $db;
+    private $username;
+    private $password;
+    function __construct($host,$db,$username,$password) {
+        $this->host=$host;
+        $this->db=$db;
+        $this->username=$username;
+        $this->password=$password;
         try {
             $this->con = mysqli_connect($this->host,$this->username,$this->password,
         $this->db);
